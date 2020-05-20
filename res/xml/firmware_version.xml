@@ -21,6 +21,12 @@
     android:title="@string/firmware_version"
     settings:keywords="@string/keywords_android_version">
 
+    <!-- Maritim Logo -->
+    <Preference
+        android:key="maritim_logo"
+        android:selectable="false"
+        settings:layout="@layout/maritim_logo" />
+
     <!-- Android version -->
     <Preference
         android:key="os_firmware_version"
