@@ -17,6 +17,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- maritim revision -->
-    <string name="maritim_revision">Maritim revision</string>
+    <string name="maritim_revision">iM OS version</string>
 
 </resources>
