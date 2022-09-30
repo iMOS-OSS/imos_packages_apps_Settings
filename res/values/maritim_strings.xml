@@ -18,5 +18,11 @@
 
     <!-- maritim revision -->
     <string name="maritim_revision">iM OS version</string>
+    <string name="device_title">Device name</string>
+    <string name="device_chipset_title">Chipset</string>
+    <string name="device_ram_title">RAM</string>
+    <string name="device_gpu_title">GPU</string>
+    <string name="device_camera_title">Camera</string>
+    <string name="device_screen_title">Screen</string>
 
 </resources>
