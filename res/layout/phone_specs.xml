@@ -87,13 +87,38 @@
                 android:layout_alignStart="@id/device_chipset_title"
                 style="@style/text_secondary"/>
                 
+             <TextView
+                android:id="@+id/device_storage_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/device_storage_title"
+                android:layout_below="@id/device_chipset_desc"
+                android:layout_alignStart="@id/device_chipset_desc"
+                android:singleLine="true"
+                style="@style/text_primary"/>
+        
+            <TextView
+                android:id="@+id/device_storage_desc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:singleLine="true"
+                android:clickable="true"
+                android:ellipsize="marquee" 
+                android:marqueeRepeatLimit="marquee_forever"
+                android:focusable="true"
+                android:focusableInTouchMode="true" 
+                android:layout_below="@id/device_storage_title"
+                android:layout_alignStart="@id/device_storage_title"
+                style="@style/text_secondary"/>
+            
             <TextView
                 android:id="@+id/device_ram_title"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/device_ram_title"
-                android:layout_below="@id/device_chipset_desc"
-                android:layout_alignStart="@id/device_chipset_desc"
+                android:layout_below="@id/device_storage_desc"
+                android:layout_alignStart="@id/device_storage_desc"
                 android:singleLine="true"
                 style="@style/text_primary"/>
         

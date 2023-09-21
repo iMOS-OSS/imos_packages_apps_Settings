@@ -54,13 +54,13 @@
         android:visibility="gone"
         settings:searchable="false"/>
 
-    <Preference
+    <!--Preference
         android:key="default_apps"
         android:title="@string/app_default_dashboard_title"
         android:order="-996"
         settings:controller="com.android.settings.applications.DefaultAppsPreferenceController">
         <intent android:action="android.settings.MANAGE_DEFAULT_APPS_SETTINGS"/>
-    </Preference>
+    </Preference-->
 
     <Preference
         android:key="game_settings"

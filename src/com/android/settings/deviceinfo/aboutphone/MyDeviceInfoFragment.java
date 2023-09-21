@@ -23,7 +23,9 @@ import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
 import android.os.UserManager;
+import android.os.Environment;
 import android.os.SystemProperties;
+import android.os.StatFs;
 import android.view.View;
 import android.widget.TextView;
 
@@ -53,6 +55,7 @@ import com.android.settingslib.widget.LayoutPreference;
 import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -149,13 +152,15 @@ public class MyDeviceInfoFragment extends DashboardFragment
         View root = specsPref.findViewById(R.id.container);
         TextView deviceName = specsPref.findViewById(R.id.device_desc);
         TextView chipsetName = specsPref.findViewById(R.id.device_chipset_desc);
+        TextView storageName = specsPref.findViewById(R.id.device_storage_desc);
         TextView ramName = specsPref.findViewById(R.id.device_ram_desc);
         TextView gpuName = specsPref.findViewById(R.id.device_gpu_desc);
         TextView cameraName = specsPref.findViewById(R.id.device_camera_desc);
         TextView screenName = specsPref.findViewById(R.id.device_screen_desc);
     
         deviceName.setText("iM4 Phone");
-        ramName.setText(String.valueOf(Math.round(Float.parseFloat(getTotalMemory().toLowerCase().replace("kb","").replace("memtotal:",""))/ 1000000)));
+        storageName.setText(getTotalInternalMemorySize() + "GB");
+        ramName.setText(String.valueOf(Math.round(Float.parseFloat(getTotalMemory().toLowerCase().replace("kb","").replace("memtotal:",""))/ 1000000)) + "GB");
     
         if (deviceCodename.equals("selene")){
             chipsetName.setText("MediaTek Helio G88");
@@ -183,6 +188,32 @@ public class MyDeviceInfoFragment extends DashboardFragment
             cameraName.setText("Unknown");
             screenName.setText("Unknown");
         }
+    }
+    
+    public static String getTotalInternalMemorySize() {
+        File path = Environment.getDataDirectory();
+        StatFs stat = new StatFs(path.getPath());
+        String aprox;
+        long blockSize = stat.getBlockSizeLong();
+        long totalBlocks = stat.getBlockCountLong();
+        double total = (totalBlocks * blockSize)/ 1073741824;
+        int lastval = (int) Math.round(total);
+            if ( lastval > 0  && lastval <= 16){
+                aprox = "16";
+            } else if (lastval > 16 && lastval <=32) {
+                aprox = "32";
+            } else if (lastval > 32 && lastval <=64) {
+                aprox = "64";
+            } else if (lastval > 64 && lastval <=128) {
+                aprox = "128";
+            } else if (lastval > 128 && lastval <= 256) {
+                aprox = "256";
+            } else if (lastval > 256 && lastval <= 512) {
+                aprox = "512";
+            } else if (lastval > 512) {
+                aprox = "512+";
+            } else aprox = "null";
+        return aprox;
     }
     
     public static String getTotalMemory() {

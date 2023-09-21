@@ -24,5 +24,6 @@
     <string name="device_gpu_title">GPU</string>
     <string name="device_camera_title">Camera</string>
     <string name="device_screen_title">Screen</string>
+    <string name="device_storage_title">Storage</string>
 
 </resources>

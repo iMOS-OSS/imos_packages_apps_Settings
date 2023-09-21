@@ -40,23 +40,23 @@
         settings:highlightableMenuKey="@string/menu_key_connected_devices"
         settings:controller="com.android.settings.connecteddevice.TopLevelConnectedDevicesPreferenceController"/>
 
-    <com.android.settings.widget.HomepagePreference
+    <!--com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.applications.AppDashboardFragment"
         android:icon="@drawable/ic_apps"
         android:key="top_level_apps"
         android:order="-130"
         android:title="@string/apps_dashboard_title"
         android:summary="@string/app_and_notification_dashboard_summary"
-        settings:highlightableMenuKey="@string/menu_key_apps"/>
+        settings:highlightableMenuKey="@string/menu_key_apps"/-->
 
-    <com.android.settings.widget.HomepagePreference
+    <!--com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.notification.ConfigureNotificationSettings"
         android:icon="@drawable/ic_notifications"
         android:key="top_level_notifications"
         android:order="-120"
         android:title="@string/configure_notification_settings"
         android:summary="@string/notification_dashboard_summary"
-        settings:highlightableMenuKey="@string/menu_key_notifications"/>
+        settings:highlightableMenuKey="@string/menu_key_notifications"/-->
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.fuelgauge.PowerUsageSummary"
@@ -68,7 +68,7 @@
         settings:highlightableMenuKey="@string/menu_key_battery"
         settings:controller="com.android.settings.fuelgauge.TopLevelBatteryPreferenceController"/>
 
-    <com.android.settings.widget.HomepagePreference
+    <!--com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.deviceinfo.StorageDashboardFragment"
         android:icon="@drawable/ic_storage_white"
         android:key="top_level_storage"
@@ -76,7 +76,7 @@
         android:title="@string/storage_settings"
         android:summary="@string/summary_placeholder"
         settings:highlightableMenuKey="@string/menu_key_storage"
-        settings:controller="com.android.settings.deviceinfo.TopLevelStoragePreferenceController"/>
+        settings:controller="com.android.settings.deviceinfo.TopLevelStoragePreferenceController"/-->
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.notification.SoundSettings"
@@ -126,14 +126,14 @@
         settings:highlightableMenuKey="@string/menu_key_security"
         settings:controller="com.android.settings.security.TopLevelSecurityEntryPreferenceController"/>
 
-    <com.android.settings.widget.HomepagePreference
+    <!--com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.privacy.PrivacyDashboardFragment"
         android:icon="@drawable/ic_settings_privacy"
         android:key="top_level_privacy"
         android:order="-40"
         android:title="@string/privacy_dashboard_title"
         android:summary="@string/privacy_dashboard_summary"
-        settings:highlightableMenuKey="@string/menu_key_privacy"/>
+        settings:highlightableMenuKey="@string/menu_key_privacy"/-->
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.location.LocationSettings"
